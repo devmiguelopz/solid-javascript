@@ -22,12 +22,8 @@ class CartController {
     constructor(cart) {
         this.cart = cart;
 
-        eventAggregator.subscribe('productSelected', eventArgs => {
-            this[productSelected](eventArgs);
-        });
-        eventAggregator.subscribe('itemRemoved', eventArgs =>
-            this[itemRemoved](eventArgs),
-        );
+        eventAggregator.subscribe('productSelected', eventArgs => this[productSelected](eventArgs));
+        eventAggregator.subscribe('itemRemoved', eventArgs => this[itemRemoved](eventArgs) );
     }
 
     /**

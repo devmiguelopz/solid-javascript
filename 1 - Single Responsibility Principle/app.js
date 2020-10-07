@@ -24,6 +24,8 @@ const cart = new Cart();
  * Initialize views & controllers
  *
  */
+debugger;
 const productView = new ProductView(products);
+
 const cartController = new CartController(cart);
 const cartView = new CartView();

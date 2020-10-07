@@ -21,9 +21,7 @@ class CartView {
     constructor() {
         this.$cart = document.getElementById('cart');
 
-        eventAggregator.subscribe('itemAdded', eventArgs =>
-            this[itemAdded](eventArgs),
-        );
+        eventAggregator.subscribe('itemAdded', eventArgs => this[itemAdded](eventArgs));
     }
 
     /**
